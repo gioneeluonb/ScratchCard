@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>挂奖</title>
+	<style>
+		.under,.upper{
+			width: 270px;
+			height: 129px;
+		}
+		.under img{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="under">
+	<img src="http://img0.bdstatic.com/img/image/shouye/xinshouye/PPT1.jpg">
+</div>
+<div class="upper">
+	
+</div>
+<script type="text/javascript" src="./scratchcard.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		var scratchcard = new ScratchCard('under','upper');
+		scratchcard.initCanvas();
+	}
+</script>
+</body>
+</html>
