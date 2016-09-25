@@ -18,8 +18,8 @@
 		createCanvas:function(){
 			var canvas = document.createElement('canvas');
 			canvas.setAttribute('id','scratch');
-			canvas.width = this.rect.width;
-			canvas.height = this.rect.height;
+			canvas.width = this.rect.width * this.dpr;
+			canvas.height = this.rect.height * this.dpr;
 			canvas.style.width = this.rect.width+'px';
 			canvas.style.height = this.rect.height+'px';
 			return canvas;
@@ -41,7 +41,7 @@
 			img.src = this.imgurl;
 			img.crossOrigin = 'anonymous';
 			img.onload = function(){
-				that.ctx.drawImage(img,0,0,that.rect.width,that.rect.height);
+				that.ctx.drawImage(img,0,0,that.rect.width*that.dpr,that.rect.height*that.dpr);
 			}
 		},
 		initCanvas:function(){
@@ -63,7 +63,7 @@
 			var offsetY = this.rect.top;
 			ctx.globalCompositeOperation = 'destination-out';
 			ctx.beginPath();
-			ctx.arc(pos.pageX-offsetX,pos.pageY-offsetY,this.radius,0,Math.PI*2);
+			ctx.arc(this.dpr*(pos.pageX-offsetX),this.dpr*(pos.pageY-offsetY),this.radius,0,Math.PI*2);
 			ctx.fill();
 			ctx.closePath();
 			e.preventDefault();
