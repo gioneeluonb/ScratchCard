@@ -1,7 +1,7 @@
 ;(function(win){
 	'use strict';
 	
-	var defaultUrl = "http://luonb.com/ScratchCard/bd_logo.png"
+	var defaultUrl = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuP49FSIiPIQeEmv4rMth3elbFO-Rq_3veKYUrsPoce8xl6SWQDYR5YQ"
 	
 	function ScratchCard(underlay,upperlay,imgurl,radius){
 		this.$underlay = document.querySelector('.'+underlay);
