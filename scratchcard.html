@@ -28,11 +28,11 @@
 </div>
 <script type="text/javascript" src="./scratchcard.js"></script>
 <script type="text/javascript">
-	var url1 = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuP49FSIiPIQeEmv4rMth3elbFO-Rq_3veKYUrsPoce8xl6SWQDYR5YQ';
-	var url2 = 'https://alice.com/img/123.jpg';
-	var url3 = 'http://bob.com/ScratchCard/bd_logo.png'
+	var url1 = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuP49FSIiPIQeEmv4rMth3elbFO-Rq_3veKYUrsPoce8xl6SWQDYR5YQ';// 允许跨域的图片
+	var url2 = 'https://alice.com/img/123.jpg'; //本地服务器 http
+	var url3 = 'http://bob.com/ScratchCard/bd_logo.png' //本地服务器 https
 	window.onload = function(){
-		var scratchcard = new ScratchCard('under','upper',url2);
+		var scratchcard = new ScratchCard('under','upper',url1);
 		scratchcard.initCanvas();
 	}
 </script>
