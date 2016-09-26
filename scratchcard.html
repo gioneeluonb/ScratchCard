@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<title>挂奖</title>
 	<style>
+		*{
+			padding:0;margin:0;
+		}
 		.under,.upper{
 			width: 270px;
 			height: 129px;
@@ -25,8 +28,11 @@
 </div>
 <script type="text/javascript" src="./scratchcard.js"></script>
 <script type="text/javascript">
+	var url1 = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuP49FSIiPIQeEmv4rMth3elbFO-Rq_3veKYUrsPoce8xl6SWQDYR5YQ';
+	var url2 = 'https://alice.com/img/123.jpg';
+	var url3 = 'http://bob.com/ScratchCard/bd_logo.png'
 	window.onload = function(){
-		var scratchcard = new ScratchCard('under','upper');
+		var scratchcard = new ScratchCard('under','upper',url2);
 		scratchcard.initCanvas();
 	}
 </script>
